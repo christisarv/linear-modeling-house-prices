@@ -1,44 +1,29 @@
-# Phase 2 Project
+# Housing Data Analysis
 
 
-## Project Overview
+## Overview
 
-For this project, you will use regression modeling to analyze house sales in a northwestern county.
+For this project I'll be using the Kings County housing dataset to solve a housing-related business problem using linear regression techniques. I'll be using the CRISP-DM Data Science method which the structure this notebook will follow, demonstraing an iterative modeling process with feature engineering, model fit, evaluation, and repeating until the model proves to be useful to my business case.
+
+<img src="Images/new_crisp-dm.png" width=400>
 
 ### The Data
 
-This project uses the King County House Sales dataset, which can be found in  `kc_house_data.csv` in the data folder in this repo. The description of the column names can be found in `column_names.md` in the same folder. As with most real world data sets, the column names are not perfectly described, so you'll have to do some research or use your best judgment if you have questions about what the data means.
-
-It is up to you to decide what data from this dataset to use and how to use it. If you are feeling overwhelmed or behind, we recommend you ignore some or all of the following features:
-
-* date
-* view
-* sqft_above
-* sqft_basement
-* yr_renovated
-* zipcode
-* lat
-* long
-* sqft_living15
-* sqft_lot15
+This data includes house sale prices and conditions from houses sold through 2014-2015 in the Seattle area. These houses were built as early as 1900 and as late as 2015. The data includes several variables that describe the house, its location, and its condition. 
 
 ### Business Problem
 
-It is up to you to define a stakeholder and business problem appropriate to this dataset.
+The stakeholder for this project, a housing development company, working on new model homes, wants to design houses that will sell to middle class buyers who are currently facing a shortage of available and affordable inventory due to the increase in demand during 2020.
 
-If you are struggling to define a stakeholder, we recommend you complete a project for a real estate agency that helps homeowners buy and/or sell homes. A business problem you could focus on for this stakeholder is the need to provide advice to homeowners about how home renovations might increase the estimated value of their homes, and by what amount.
+The median national home listing price grew by 13.4% over last year nationally, and The Seattle-Tacoma-Bellevue metro area saw YoY listing prices rise 7.8% with a median price of $627,500. Meanwhile, there was a 35.6% decrease in listings. So less houses available and higher prices.
 
-## Deliverables
+The developers would like understand which features a home should include at the median price range so that they can appropriately design new homes to replenish inventory and make some sales where they know demand exists.
 
-There are three deliverables for this project:
+## Methods
 
-* A **GitHub repository**
-* A **Jupyter Notebook**
-* A **non-technical presentation**
 
-Review the "Project Submission & Review" page in the "Milestones Instructions" topic for instructions on creating and submitting your deliverables. Refer to the rubric associated with this assignment for specifications describing high-quality deliverables.
 
-### Key Points
+## Results
 
 * **Your deliverables should explicitly address each step of the data science process.** Refer to [the Data Science Process lesson](https://github.com/learn-co-curriculum/dsc-data-science-processes) from Topic 19 for more information about process models you can use.
 
@@ -46,16 +31,25 @@ Review the "Project Submission & Review" page in the "Milestones Instructions" t
 
 * **Based on the results of your models, your notebook and presentation should discuss at least two features that have strong relationships with housing prices.**
 
-## Getting Started
+### Conclusions
 
-Start on this project by forking and cloning [this project repository](https://github.com/learn-co-curriculum/dsc-phase-2-project) to get a local copy of the dataset.
 
-We recommend structuring your project repository similar to the structure in [the Phase 1 Project Template](https://github.com/learn-co-curriculum/dsc-project-template). You can do this either by creating a new fork of that repository to work in or by building a new repository from scratch that mimics that structure.
 
-## Project Submission and Review
-
-Review the "Project Submission & Review" page in the "Milestones Instructions" topic to learn how to submit your project and how it will be reviewed. Your project must pass review for you to progress to the next Phase.
-
-## Summary
+## Next Steps
 
 This project will give you a valuable opportunity to develop your data science skills using real-world data. The end-of-phase projects are a critical part of the program because they give you a chance to bring together all the skills you've learned, apply them to realistic projects for a business stakeholder, practice communication skills, and get feedback to help you improve. You've got this!
+
+## For More Information
+
+See the full analysis in the [Jupyter Notebook](./Movie%20Analysis%20Notebook.ipynb) or review this [presentation](./Movie%20Data%20Analysis%20Presentation.pdf).
+
+## Repository Structure
+
+```
+├── Backup Work
+├── Images
+├── Data
+├── Movie Analysis Notebook.ipynb
+├── Movie Data Analysis.pdf
+├── README.md
+└── Movie Data Analysis Presentation.pdf
