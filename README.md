@@ -72,7 +72,7 @@ While the data cleaning and transformations I made to this data followed best pr
 
 ## For More Information
 
-See the full analysis in the [Jupyter Notebook](./Housing%Data%Model%&%Analysis.ipynb) or review this [presentation](./Housing%20Data%20Analysis%20Presentation.pdf).
+See the full analysis in the [Jupyter Notebook](./Housing%20Data%20Model%20&%20Analysis.ipynb) or review this [presentation](./Housing%20Data%20Analysis%20Presentation.pdf).
 
 ## Repository Structure
 
