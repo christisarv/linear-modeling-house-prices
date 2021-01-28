@@ -1,15 +1,20 @@
 # Housing Data Analysis
 
+**Author**: [Christie Sarver](mailto:christie.sarver@gmail.com)
 
 ## Overview
 
-For this project I'll be using the Kings County housing dataset to solve a housing-related business problem using linear regression techniques. I'll be using the CRISP-DM Data Science method which the structure this notebook will follow, demonstraing an iterative modeling process with feature engineering, model fit, evaluation, and repeating until the model proves to be useful to my business case.
+For this project the Kings County housing dataset is used to solve a housing-related business problem using linear regression techniques. I used the CRISP-DM Data Science method which the structure the Jupyter Notebook  follows, demonstraing an iterative modeling process with feature engineering, model fit, evaluation, and repeating until the model proves to be useful to the business case.
 
-<img src="Images/new_crisp-dm.png" width=400>
+<img src="Images/new_crisp-dm.png" width=400 class="center">
 
 ### The Data
 
-This data includes house sale prices and conditions from houses sold through 2014-2015 in the Seattle area. These houses were built as early as 1900 and as late as 2015. The data includes several variables that describe the house, its location, and its condition. 
+This data includes house sale prices and descriptive features from houses sold through 2014-2015 in the Seattle area. These houses were built as early as 1900 and as late as 2015. The data includes several variables that describe the house, its location, and its condition. 
+
+The image below shows a scatter plot of the houses in the data. 
+
+![house_map_scatter.png](./Images/house_map_scatter.png)
 
 ### Business Problem
 
@@ -19,37 +24,65 @@ The median national home listing price grew by 13.4% over last year nationally, 
 
 The developers would like understand which features a home should include at the median price range so that they can appropriately design new homes to replenish inventory and make some sales where they know demand exists.
 
-## Methods
+## Methodology
 
+Following the CRISP-DM method for linear regression modeling, data was cleaned and processed to include only the most relevant features. Strategical thinking was also applied to make sure feature engineering decisions were applicable to the business problem.
 
+Features included in the data that were not in the model include:
+* Condition
+* Year sold
+* Waterfront
+* Zipcode (different location variables were included)
+
+From the predictor variable, price, outliers were removed so that only the most relevant data was included based on the pricing parameters for the business case. The image below shows the distribution of data before the second round of outliers was removed
+
+![y_dist.png](./Images/y_dist.png)
+
+Additionally, features were transformed using log trasformation and scaling to normalize distributions and help interpret the data. Some variables were adapted to be more descriptive and relevant. 
 
 ## Results
 
-* **Your deliverables should explicitly address each step of the data science process.** Refer to [the Data Science Process lesson](https://github.com/learn-co-curriculum/dsc-data-science-processes) from Topic 19 for more information about process models you can use.
+### Business Results and Recommendation
 
-* **Your Jupyter Notebook should demonstrate an iterative approach to modeling.** This means that you begin with a basic model, evaluate it, and then provide justification for and proceed to a new model. After you finish refining your models, you should provide 1-3 paragraphs discussing your final model - this should include interpreting at least 3 important parameter estimates or statistics.
+The final model analysis describes the following. 
 
-* **Based on the results of your models, your notebook and presentation should discuss at least two features that have strong relationships with housing prices.**
+Features that drive value in homes for our target buyer are:
+* Size of the home interior
+* Number of bathrooms (more so than bedrooms)
+* High construction quality and materials
 
-### Conclusions
+The value is significantly decreased where:
+ * Construction quality is average or low
+* House is further away from the city center
 
+Based on this, recommendations for the housing developers are
 
+* Focus on maximizing the living area of the house over the yard size, or adding a basement
+* Use high quality construction methods 
+* Build multi-floor homes and include ample bathrooms to reflect what buyers are looking for
 
-## Next Steps
+### Technical Recommendation/Future Work
 
-This project will give you a valuable opportunity to develop your data science skills using real-world data. The end-of-phase projects are a critical part of the program because they give you a chance to bring together all the skills you've learned, apply them to realistic projects for a business stakeholder, practice communication skills, and get feedback to help you improve. You've got this!
+If there is further work on this project, I would recommend continuing to engineer features of the model in order to improve the R2 score and decrease error. Although I didn't detect any interactions, I would recommend looking more into how the features interact and relate to each other.
+To make the model more generalizable, it would also be interesting to include data from multiple markets to see what trends are local vs specific to this market and potentially build multiple models to show the differences.
+
+## Conclusions
+
+While the data cleaning and transformations I made to this data followed best practices to fit it to a linear regression model, it didn't end up as accurate as I would have hoped. However, I was able to inform my business question by defining features of a home that would be important to a certain segment of buyers and eliminating many that do not prove to affect price.
 
 ## For More Information
 
-See the full analysis in the [Jupyter Notebook](./Movie%20Analysis%20Notebook.ipynb) or review this [presentation](./Movie%20Data%20Analysis%20Presentation.pdf).
+See the full analysis in the [Jupyter Notebook](./Housing%Data%Model%&%Analysis.ipynb) or review this [presentation](./Housing%20Data%20Analysis%20Presentation.pdf).
 
 ## Repository Structure
 
 ```
-├── Backup Work
+├── Archive
 ├── Images
-├── Data
-├── Movie Analysis Notebook.ipynb
-├── Movie Data Analysis.pdf
+├── data
+├── Housing Data Model & Analysis.ipynb
+├── Housing Data Analysis Presentation.pdf
 ├── README.md
-└── Movie Data Analysis Presentation.pdf
+
+```
+Thank you!
